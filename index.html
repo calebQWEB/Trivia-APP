@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Trivia</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="trivia__start-page" id="start-page">
+                <h1>WELCOME TO OUR<br> TRIVIA APP</h1>
+                <button type="button" class="get-started">GET STARTED</button>
+            </div>
+
+            <div class="trivia__category-page" id="category-page" hidden>
+                <h1>CATEGORIES</h1>
+
+                <div class="cards-container">
+                    <span class='card-span cards'>General Knowledge</span>
+                    <span class='card-span cards'>Geography</span>
+                    <span class='card-span cards'>History</span>
+                    <span class='card-span cards'>Music</span>
+                    <span class='card-span cards'>Science</span>
+                </div>
+            </div>
+
+            <div class="trivia__difficulty-page" hidden>
+                <h1>DIFFICULTY</h1>
+                <div class="difficulty-container">
+                    <span class="difficulty">easy</span>
+                    <span class="difficulty">medium</span>
+                    <span class="difficulty">hard</span>
+                </div>
+            </div>
+
+            <div class="trivia__questions-page" id='question-page' hidden>
+                <span class="question-count"></span>
+                <h2 class="question"></h2>
+                <div class="answers">
+                </div>
+            </div>
+
+            <div class="trivia__result-page" hidden>
+                <h1>YOUR SCORE</h1>
+                <h2 class="score"></h2>
+                <h3 class="score-statement"></h3>
+                <button type="button" class="new-game">NEW GAME</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

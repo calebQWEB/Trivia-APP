@@ -1,0 +1,282 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --main-background: linear-gradient(180deg, rgb(137, 215, 240), rgb(124, 79, 255));
+    --text-gradient: -webkit-linear-gradient(180deg, rgb(137, 215, 240), rgb(124, 79, 255));
+    --card-background: rgb(124, 79, 255);
+    --card-background2: rgb(137, 215, 240);
+    --white: #FFFFFF;
+}
+
+main {
+    position: relative;
+    background-image: var(--main-background);
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    width: 22rem;
+    padding: 2.5rem;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.trivia__start-page {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.trivia__start-page h1 {
+    font-size: 1.475rem;
+    font-weight: 900;
+    font-family: 'Kanit', sans-serif;
+
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.get-started {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border: none;
+    border-radius: 30px;
+
+
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.get-started:hover {
+    background-color: rgb(141, 104, 252);
+}
+
+/* CATEGORIES */
+.trivia__category-page {
+    text-align: center;
+}
+
+.trivia__category-page h1 {
+    font-size: 1.375rem;
+    font-weight: 900;
+    font-family: 'Kanit', sans-serif;
+
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.cards {
+    padding: 1rem;
+    background-color: var(--card-background);
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cards:hover {
+    background-color: rgb(141, 104, 252);
+}
+
+/* Diffuculty */
+.trivia__difficulty-page {
+    text-align: center;
+}
+
+.trivia__difficulty-page h1 {
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+
+    font-size: 1.375rem;
+    font-weight: 900;
+    font-family: 'Kanit', sans-serif;
+}
+
+.difficulty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.difficulty-container span {
+    padding: 1rem;
+    background-color: var(--card-background);
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.difficulty-container span:hover {
+    background-color: rgb(141, 104, 252);
+}
+
+
+/* Questions */
+.trivia__questions-page {
+    text-align: center;
+}
+
+.trivia__questions-page h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2rem 0 3rem 0;
+}
+
+.question-count {
+    font-weight: 1.25rem;
+    font-weight: 700;
+    color: rgb(141, 104, 252);
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.answer-cards {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--card-background);
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.answer-cards:hover {
+    background-color: rgb(141, 104, 252);
+}
+
+.answer-cards:active {
+    background-color: black;
+}
+
+.trivia__result-page {
+    text-align: center;
+}
+
+.trivia__result-page h1 {
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+
+    font-size: 1.375rem;
+    font-weight: 900;
+    font-family: 'Kanit', sans-serif;
+}
+
+.score {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.new-game {
+    background-color: var(--card-background);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+
+
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.score-statement {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        width: 18rem;
+    }
+
+    .trivia__start-page h1, 
+    .trivia__category-page h1, 
+    .trivia__difficulty-page h1, 
+    .trivia__category-page h1 {
+        font-size: 1.2rem;
+    }
+
+    .trivia__questions-page h2 {
+        font-size: 1.125rem;
+    }
+
+    .cards,
+    .difficulty-container span,
+    .answer-cards {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        width: 15rem;
+    }
+
+    .trivia__start-page h1, 
+    .trivia__category-page h1, 
+    .trivia__difficulty-page h1, 
+    .trivia__category-page h1 {
+        font-size: 1.125rem;
+    }
+
+    .trivia__questions-page h2 {
+        font-size: 1rem;
+    }
+
+    .cards,
+    .difficulty-container span,
+    .answer-cards {
+        font-size: 0.7rem;
+    }
+
+}
